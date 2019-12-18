@@ -1,0 +1,20 @@
+	<bean id="studentBean" class="springprojectsample.Student">
+		<property name="stdNo" value="451245"></property>
+		<constructor-arg>
+			<ref bean="carBean"></ref>
+		</constructor-arg>
+	</bean>
+
+
+
+-----------------
+
+<bean id="studentBean" class="springprojectsample.Student">
+		<property name="car" ref="carBean">
+		</property>
+	</bean>
+
+	<bean id="carBean" class="springprojectsample.Car">
+		<property name="make" value="Honda"></property>
+		<property name="model" value="CRV"></property>
+	</bean>
